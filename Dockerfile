@@ -18,4 +18,5 @@ RUN dotnet publish -c release -o published --no-cache
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 COPY --from=build /build/published ./
+LABEL org.opencontainers.image.source https://github.com/kitarsh/net
 ENTRYPOINT ["dotnet", "kitarsh.net.dll"]

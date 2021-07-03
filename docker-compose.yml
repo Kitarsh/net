@@ -1,6 +1,7 @@
 services:
   web:
-    build: .
-    ports:
-      - "4200:80"
     image: kitarsh.net
+    ports:
+      - "5555:80"
+    volumes:
+      - ./../ConfigProd:/app/Config

@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { LinksComponent } from './links/links.component';
 import { FooterComponent } from './footer/footer.component';
+import { TwitchVideosComponent } from './twitch-videos/twitch-videos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     CounterComponent,
     FetchDataComponent,
     LinksComponent,
-    FooterComponent
+    FooterComponent,
+    TwitchVideosComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'twitch-videos', component: TwitchVideosComponent },
     ])
   ],
   providers: [],

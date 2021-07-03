@@ -2,32 +2,32 @@ button {
   margin: .25rem;
 }
 
-  button.btn.discord {
-    border-color: #7289DA;
-    color: #7289DA;
-  }
+button.btn.discord {
+  border-color: #7289DA;
+  color       : #7289DA;
+}
 
-    button.btn.discord:hover {
-      background-color: #7289DA;
-      color: #FFFFFF;
-    }
+button.btn.discord:hover {
+  background-color: #7289DA;
+  color           : #FFFFFF;
+}
 
-  button.btn.github {
-    border-color: #4078c0;
-    color: #4078c0;
-  }
+button.btn.github {
+  border-color: #2f3337;
+  color       : #2f3337;
+}
 
-    button.btn.github:hover {
-      background-color: #4078c0;
-      color: #FFFFFF;
-    }
+button.btn.github:hover {
+  background-color: #2f3337;
+  color           : #FFFFFF;
+}
 
-  button.btn.twitch {
-    border-color: #9146ff;
-    color: #9146ffff;
-  }
+button.btn.twitch {
+  border-color: #9146ff;
+  color       : #9146ffff;
+}
 
-    button.btn.twitch:hover {
-      background-color: #9146ff;
-      color: #FFFFFF;
-    }
+button.btn.twitch:hover {
+  background-color: #9146ff;
+  color           : #FFFFFF;
+}

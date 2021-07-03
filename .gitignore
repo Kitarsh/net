@@ -230,3 +230,9 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 /published/*
+
+
+.vscode/launch.json
+.vscode/tasks.json
+*/package-lock.json
+/Config/*

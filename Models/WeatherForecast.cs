@@ -1,6 +1,6 @@
 using System;
 
-namespace kitarsh.net
+namespace kitarsh.net.Models
 {
     public class WeatherForecast
     {

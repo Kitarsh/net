@@ -1,0 +1,19 @@
+.card {
+    border-radius: 0.5rem;
+    margin       : 10px;
+    cursor       : pointer;
+}
+
+.card:hover {
+    background-color: #DDDDDD;
+}
+
+.card img {
+    border-top-left-radius   : 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.card .Twitch-Description {
+    max-height: 52px;
+    overflow  : hidden;
+}

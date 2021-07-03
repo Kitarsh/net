@@ -1,19 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-links',
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.css']
 })
-export class LinksComponent implements OnInit {
+export class LinksComponent {
   urlToGitHub: string = "https://github.com/Kitarsh/net";
   urlToDiscord: string = "https://discord.gg/PjNqJSY9E6";
   urlToTwitch: string = "https://twitch.tv/kitarsh";
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   goToLinkGitHub() {
     window.open(this.urlToGitHub, '_blank').focus();

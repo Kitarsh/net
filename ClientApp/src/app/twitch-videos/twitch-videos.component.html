@@ -1,9 +1,9 @@
-<!-- <p>{{textDisplay}}</p> -->
 <div class="card" *ngFor="let twitchVideo of twitchVideos">
-    <div (click)="clickOnCard(twitchVideo.url)">
+    <div (click|onKeyPress|onKeyDown|onKeyUp)="clickOnCard(twitchVideo.url)">
         <div class="row g-0">
             <div class="col-md-4">
-                <img class="img-fluid" src="{{twitchVideo.thumbnail_url}}" />
+                <img class="img-fluid" width="auto" height="auto" alt="{{twitchVideo.Title}}"
+                    src="{{twitchVideo.thumbnail_url}}" />
             </div>
             <div class="col-md-8">
                 <div class="card-body">

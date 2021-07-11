@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
-using YamlDotNet.RepresentationModel;
 using YamlDotNet.Serialization;
 
 namespace kitarsh.net.Models.TwitchConfig

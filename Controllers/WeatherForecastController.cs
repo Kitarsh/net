@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Threading.Tasks;
 using kitarsh.net.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,6 +13,7 @@ namespace kitarsh.net.Controllers
     {
         private const int MinTempCelsius = -20;
         private const int MaxTempCelsius = 55;
+        private const int TableElements = 5;
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -29,7 +29,8 @@ namespace kitarsh.net.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            _logger.LogInformation("Weather called.");
+            return Enumerable.Range(1, TableElements).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = GetRandomNumberInRange(MinTempCelsius, MaxTempCelsius),

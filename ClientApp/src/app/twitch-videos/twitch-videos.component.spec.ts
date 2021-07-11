@@ -8,9 +8,9 @@ describe('TwitchVideosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TwitchVideosComponent ]
+      declarations: [TwitchVideosComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

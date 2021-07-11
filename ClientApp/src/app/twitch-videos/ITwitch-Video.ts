@@ -6,8 +6,8 @@ export interface ITwitchVideo {
 }
 
 export class ITwitchVideoExtention {
-    public clearThumbnailUrl (twitchVideo: ITwitchVideo): void {
-        twitchVideo.thumbnail_url = twitchVideo.thumbnail_url.replace("%{width}", "480");
-        twitchVideo.thumbnail_url = twitchVideo.thumbnail_url.replace("%{height}", "360");
+    public clearThumbnailUrl(twitchVideo: ITwitchVideo): void {
+        twitchVideo.thumbnail_url = twitchVideo.thumbnail_url.replace('%{width}', '480');
+        twitchVideo.thumbnail_url = twitchVideo.thumbnail_url.replace('%{height}', '360');
     }
 }

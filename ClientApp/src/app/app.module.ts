@@ -33,9 +33,9 @@ import { TwitchVideosComponent } from './twitch-videos/twitch-videos.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'twitch-videos', component: TwitchVideosComponent },
-    ])
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

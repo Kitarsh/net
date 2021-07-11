@@ -18,13 +18,13 @@ namespace kitarsh.net.Controllers
             {
                 var videosConfig = new TwitchVideosConfig();
                 videosConfig.AddParameter(tokens.UserId);
-                var uri = videosConfig.GetUri();
+                var uri = videosConfig.Uri;
                 var request = new HttpRequestMessage(HttpMethod.Get, uri);
                 request.Headers.Add(tokens.AuthorizationToken.Key, tokens.AuthorizationToken.Value);
                 request.Headers.Add(tokens.ClientIdToken.Key, tokens.ClientIdToken.Value);
 
                 HttpResponseMessage response = await client.SendAsync(request);
-                return new string[] { await response.Content.ReadAsStringAsync() };
+                return new[] { await response.Content.ReadAsStringAsync() };
             }
         }
     }

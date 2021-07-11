@@ -8,8 +8,8 @@ import { WeatherForecast } from './fetch-data';
 })
 export class FetchDataService {
   constructor(
-    private http: HttpClient,
-    @Inject('BASE_URL') private baseUrl: string) { }
+    private readonly http: HttpClient,
+    @Inject('BASE_URL') private readonly baseUrl: string) { }
 
   getFetchData(): Observable<WeatherForecast[]> {
     return this.http.get<WeatherForecast[]>(this.baseUrl + 'weatherforecast');

@@ -5,13 +5,13 @@ import { FetchDataService } from './fetch-data.service';
 
 @Component({
   selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html'
+  templateUrl: './fetch-data.component.html',
 })
 export class FetchDataComponent implements OnInit, OnDestroy {
   public forecasts: WeatherForecast[];
   subscribed: Subscription;
 
-  constructor(private srv: FetchDataService) { }
+  constructor(private readonly srv: FetchDataService) { }
 
   ngOnDestroy(): void {
     this.subscribed.unsubscribe();

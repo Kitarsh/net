@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-links',
   templateUrl: './links.component.html',
-  styleUrls: ['./links.component.css']
+  styleUrls: ['./links.component.css'],
 })
 export class LinksComponent {
-  urlToGitHub: string = "https://github.com/Kitarsh/net";
-  urlToDiscord: string = "https://discord.gg/PjNqJSY9E6";
-  urlToTwitch: string = "https://twitch.tv/kitarsh";
+  urlToGitHub = 'https://github.com/Kitarsh/net';
+  urlToDiscord = 'https://discord.gg/PjNqJSY9E6';
+  urlToTwitch = 'https://twitch.tv/kitarsh';
 
   goToLinkGitHub() {
     window.open(this.urlToGitHub, '_blank').focus();

@@ -9,7 +9,7 @@ namespace kitarsh.net.Controllers
     [Route("[controller]")]
     public class TwitchController : ControllerBase
     {
-        private TwitchTokens tokens = new TwitchTokens();
+        private readonly TwitchTokens tokens = new TwitchTokens();
 
         [HttpGet]
         public async Task<string[]> Get()

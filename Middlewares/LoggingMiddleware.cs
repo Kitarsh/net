@@ -13,7 +13,7 @@ namespace kitarsh.net.Middlewares
             this.next = next;
         }
 
-        public void Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context)
         {
             if (context == null)
             {
@@ -21,11 +21,6 @@ namespace kitarsh.net.Middlewares
             }
             Console.WriteLine($"{context.Request.Path.Value}");
 
-            _ = InvokeInternal(context);
-        }
-
-        private async Task InvokeInternal(HttpContext context)
-        {
             try
             {
                 await this.next(context);

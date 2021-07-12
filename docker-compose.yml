@@ -1,6 +1,6 @@
 services:
   web:
-    image: kitarsh.net
+    image: ghcr.io/kitarsh/net:0.0.4
     ports:
       - "5555:80"
     volumes:

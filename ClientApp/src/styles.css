@@ -9,6 +9,11 @@ code {
   color: #e01a76;
 }
 
+body {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;

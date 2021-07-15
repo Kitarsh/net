@@ -1,6 +1,6 @@
 services:
   web:
-    image: ghcr.io/kitarsh/net:0.0.4
+    image: docker.pkg.github.com/kitarsh/net/kitarsh.net:0.0.4
     ports:
       - "5555:80"
     volumes:

@@ -13,12 +13,12 @@ button.btn.discord:hover {
 }
 
 button.btn.github {
-  border-color: #2f3337;
-  color       : #2f3337;
+  border-color: #616970;
+  color       : #616970;
 }
 
 button.btn.github:hover {
-  background-color: #2f3337;
+  background-color: #616970;
   color           : #FFFFFF;
 }
 

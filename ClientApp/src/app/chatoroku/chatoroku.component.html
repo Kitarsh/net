@@ -1,0 +1,11 @@
+<div class="card-columns">
+    <div class="card bg-dark" style="width: 18rem;" *ngFor="let article of articles">
+        <img class="card-img-top" *ngIf="article.paragraphs.length > 0 && article.paragraphs[0].image != null"
+            src="{{article.paragraphs[0].image}}" alt="{{article.paragraphs[0].title}}">
+        <div class="card-body">
+            <h5 class="card-title">{{article.title}}</h5>
+            <p class="card-text">{{article.paragraphs[0].text}}</p>
+            <a class="btn btn-primary">Read article</a>
+        </div>
+    </div>
+</div>

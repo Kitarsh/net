@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { LinksComponent } from './links/links.component';
 import { FooterComponent } from './footer/footer.component';
 import { TwitchVideosComponent } from './twitch-videos/twitch-videos.component';
+import { ChatorokuComponent } from './chatoroku/chatoroku.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TwitchVideosComponent } from './twitch-videos/twitch-videos.component';
     LinksComponent,
     FooterComponent,
     TwitchVideosComponent,
+    ChatorokuComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,6 +35,7 @@ import { TwitchVideosComponent } from './twitch-videos/twitch-videos.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'twitch-videos', component: TwitchVideosComponent },
+      { path: 'chatoroku-articles', component: ChatorokuComponent },
     ]),
   ],
   providers: [],

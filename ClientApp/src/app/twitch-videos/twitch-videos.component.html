@@ -1,5 +1,6 @@
 <div class="card bg-dark" *ngFor="let twitchVideo of twitchVideos">
-    <div (click|onKeyPress|onKeyDown|onKeyUp)="clickOnCard(twitchVideo.url)">
+    <div (click)="clickOnCard(twitchVideo.url)" (onKeyPress)="clickOnCard(twitchVideo.url)"
+        (onKeyDown)="clickOnCard(twitchVideo.url)" (onKeyUp)="clickOnCard(twitchVideo.url)">
         <div class="row g-0">
             <div class="col-md-4">
                 <img class="img-fluid" width="auto" height="auto" alt="{{twitchVideo.Title}}"

@@ -1,0 +1,11 @@
+<button class="btn btn-outline-primary return-btn" routerLink="/chatoroku-articles">Back</button>
+
+<div *ngIf="article">
+    <h2 class="blog-post-title">{{article.title}}</h2>
+    <div *ngFor="let paragraph of article.paragraphs">
+        <article class="blog-post">
+            <h2>{{paragraph.title}}</h2>
+            <p>{{paragraph.text}}</p>
+        </article>
+    </div>
+</div>

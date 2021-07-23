@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ChatorokuListComponent } from './chatoroku-list/chatoroku-list.component';
 import { ChatorokuDetailComponent } from './chatoroku-detail/chatoroku-detail.component';
+import { MaterialModule } from '../shared/material.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { ChatorokuDetailComponent } from './chatoroku-detail/chatoroku-detail.co
       { path: 'chatoroku-articles', component: ChatorokuListComponent },
       { path: 'chatoroku-articles/:id', component: ChatorokuDetailComponent },
     ]),
-  ]
+    MaterialModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ChatorokuModule { }

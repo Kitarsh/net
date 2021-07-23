@@ -10,14 +10,14 @@ import { IArticle } from './IArticles';
 export class ChatorokuService {
     constructor(
         private readonly http: HttpClient,
-        @Inject('BASE_URL') private readonly baseUrl: string,
+        @Inject('BASE_URL') private readonly baseUrl: string
     ) { }
 
     getChatorokuArticles(): Observable<IArticle[]> {
-        return this.http.get<IArticle[]>(this.baseUrl + 'chatoroku');
+        return this.http.get<IArticle[]>(`${this.baseUrl}chatoroku`);
     }
 
     getChatorokuArticle(idArticle: number): Observable<IArticle[]> {
-        return this.http.get<IArticle[]>(this.baseUrl + 'chatoroku/GetArticle/' + idArticle);
+        return this.http.get<IArticle[]>(`${this.baseUrl}chatoroku/GetArticle/${idArticle}`);
     }
 }

@@ -5,7 +5,7 @@ import { IArticle } from '.././IArticles';
 
 @Component({
   templateUrl: './chatoroku-list.component.html',
-  styleUrls: ['./chatoroku-list.component.css']
+  styleUrls: ['./chatoroku-list.component.scss'],
 })
 export class ChatorokuListComponent implements OnInit, OnDestroy {
   subscribedChatoroku: Subscription;

@@ -6,7 +6,7 @@ import { ITwitchVideo, ITwitchVideoExtention } from './ITwitch-Video';
 @Component({
   selector: 'app-twitch-videos',
   templateUrl: './twitch-videos.component.html',
-  styleUrls: ['./twitch-videos.component.css'],
+  styleUrls: ['./twitch-videos.component.scss'],
 })
 export class TwitchVideosComponent implements OnInit, OnDestroy {
   subcribedTwitchVideos: Subscription;

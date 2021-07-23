@@ -1,18 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.css'],
+  styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent {
-  isExpanded = false;
-
-  collapse() {
-    this.isExpanded = false;
-  }
-
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
+  @Output() toggleTheme = new EventEmitter<void>();
+  @Output() toggleDir = new EventEmitter<void>();
 }

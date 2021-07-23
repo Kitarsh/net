@@ -8,7 +8,7 @@ describe('ChatorokuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatorokuListComponent ]
+      declarations: [ ChatorokuListComponent ],
     })
     .compileComponents();
   }));

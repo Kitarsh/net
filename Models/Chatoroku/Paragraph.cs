@@ -10,7 +10,7 @@ namespace kitarsh.net.Models.Chatoroku
             return new Paragraph {
                 title = "This is Rocket League!",
                 text = "Amazing first paragraph",
-                image = null,
+                image = "https://tleclere.perso.centrale-marseille.fr/chatoroku/Images/englishflag.jpg",
             };
         }
     }

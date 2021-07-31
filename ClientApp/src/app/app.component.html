@@ -1,7 +1,8 @@
-<body>
-  <app-nav-menu></app-nav-menu>
+<div class="mat-app-background" fxLayout="column" fxLayoutAlign="space-between center" [class.colorStyle]="isColorTheme"
+  [dir]="dir">
+  <app-nav-menu (toggleTheme)="toggleTheme()" (toggleDir)="toggleDir()"></app-nav-menu>
   <div class="container">
     <router-outlet></router-outlet>
   </div>
   <app-footer></app-footer>
-</body>
+</div>

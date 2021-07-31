@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" role="heading" class="mat-elevation-z6 fixed-top">
+  <button mat-button routerLink="/" color="warn" class="WebsiteName">Kitarsh.net</button>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/twitch-videos" color="warn">Twitch Videos</button>
+  <button mat-button routerLink="chatoroku-articles" color="warn">Chatoroku</button>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="toggleTheme.emit()">Toggle theme</button>
+    <button mat-menu-item (click)="toggleDir.emit()">Toggle dir</button>
+  </mat-menu>
+</mat-toolbar>

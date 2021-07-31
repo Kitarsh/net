@@ -1,16 +1,16 @@
-<div class="card bg-dark" *ngFor="let twitchVideo of twitchVideos">
-    <div (click|onKeyPress|onKeyDown|onKeyUp)="clickOnCard(twitchVideo.url)">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img class="img-fluid" width="auto" height="auto" alt="{{twitchVideo.Title}}"
-                    src="{{twitchVideo.thumbnail_url}}" />
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{twitchVideo.title}}</h5>
-                    <p class="card-text Twitch-Description">{{twitchVideo.description}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<h1>Twitch videos from my twitch</h1>
+<mat-grid-list gutterSize="1rem" cols="3"  rowHeight="600px">
+    <mat-grid-tile *ngFor="let twitchVideo of twitchVideos">
+        <mat-card>
+            <img mat-card-image width="auto" height="auto" alt="{{twitchVideo.Title}}"
+                src="{{twitchVideo.thumbnail_url}}" />
+            <mat-card-title>{{twitchVideo.title}}</mat-card-title>
+            <mat-card-content>{{twitchVideo.description}}</mat-card-content>
+            <mat-card-actions>
+                <button mat-button color="accent" (click)="clickOnCard(twitchVideo.url)"
+                    (onKeyPress)="clickOnCard(twitchVideo.url)" (onKeyDown)="clickOnCard(twitchVideo.url)"
+                    (onKeyUp)="clickOnCard(twitchVideo.url)">Go to video</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

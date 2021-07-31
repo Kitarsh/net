@@ -1,0 +1,25 @@
+<div *ngIf="article">
+    <mat-toolbar>
+        <h2 class="blog-post-title">{{article.title}}</h2>
+        <span class="spacer"></span>
+        <button mat-button color="accent" routerLink="/chatoroku-articles">Back</button>
+    </mat-toolbar>
+    <div *ngFor="let paragraph of article.paragraphs">
+        <article class="blog-post">
+            <h2>{{paragraph.title}}</h2>
+            <p>{{paragraph.text}}</p>
+        </article>
+    </div>
+    <div *ngFor="let paragraph of article.paragraphs">
+        <article class="blog-post">
+            <h2>{{paragraph.title}}</h2>
+            <p>{{paragraph.text}}</p>
+        </article>
+    </div>
+    <div *ngFor="let paragraph of article.paragraphs">
+        <article class="blog-post">
+            <h2>{{paragraph.title}}</h2>
+            <p>{{paragraph.text}}</p>
+        </article>
+    </div>
+</div>

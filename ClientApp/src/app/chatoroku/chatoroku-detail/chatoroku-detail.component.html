@@ -3,23 +3,16 @@
         <h2 class="blog-post-title">{{article.title}}</h2>
         <span class="spacer"></span>
         <button mat-button color="accent" routerLink="/chatoroku-articles">Back</button>
+        <button mat-button color="accent" (click)="editTitle()">Change title</button>
+        <button mat-button color="accent" (click)="createParagraph()">Add paragraph</button>
     </mat-toolbar>
-    <div *ngFor="let paragraph of article.paragraphs">
-        <article class="blog-post">
+    <article class="blog-post" *ngFor="let paragraph of article.paragraphs">
+        <mat-toolbar>
             <h2>{{paragraph.title}}</h2>
-            <p>{{paragraph.text}}</p>
-        </article>
-    </div>
-    <div *ngFor="let paragraph of article.paragraphs">
-        <article class="blog-post">
-            <h2>{{paragraph.title}}</h2>
-            <p>{{paragraph.text}}</p>
-        </article>
-    </div>
-    <div *ngFor="let paragraph of article.paragraphs">
-        <article class="blog-post">
-            <h2>{{paragraph.title}}</h2>
-            <p>{{paragraph.text}}</p>
-        </article>
-    </div>
+            <span class="spacer"></span>
+            <button mat-button color="accent" (click)="editParagraph(paragraph)">Edit</button>
+            <button mat-button color="accent" (click)="deleteParagraph(paragraph)">Delete</button>
+        </mat-toolbar>
+        <p>{{paragraph.text}}</p>
+    </article>
 </div>

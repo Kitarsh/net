@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Paragraph</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.title" placeholder="Title" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.image" placeholder="Image link">
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput [(ngModel)]="data.text" placeholder="Text"></textarea>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

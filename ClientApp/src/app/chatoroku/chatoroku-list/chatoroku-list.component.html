@@ -1,4 +1,5 @@
 <h1>Articles about the Chatoroku (チァトロク)</h1>
+<button mat-button color="accent" (click)="createNewArticle()">Create new article</button>
 <mat-grid-list gutterSize="1rem" cols="3" rowHeight="300px">
     <mat-grid-tile *ngFor="let article of articles">
         <mat-card>
@@ -7,11 +8,13 @@
                     {{article.title}}
                 </mat-card-title>
             </mat-card-header>
-            <img mat-card-image width="auto" height="auto" alt="{{article.title}}" *ngIf="article.paragraphs.length > 0 && article.paragraphs[0].image != null"
-                src="{{article.paragraphs[0].image}}" alt="{{article.paragraphs[0].title}}">
-            <mat-card-content class="card-text">{{article.paragraphs[0].text}}</mat-card-content>
+            <figure>
+                <img mat-card-image width="auto" height="auto" alt="{{article.title}}" *ngIf="article.paragraphs && article.paragraphs.length > 0 && article.paragraphs[0].image" src="{{article.paragraphs[0].image}}" alt="{{article.paragraphs[0].title}}">
+            </figure>
+            <mat-card-content *ngIf="article.paragraphs && article.paragraphs.length > 0" class="card-text">
+                {{article.paragraphs[0].text | truncate : 100 : true}}</mat-card-content>
             <mat-card-actions>
-                <button mat-button color="accent" [routerLink]="['/chatoroku-articles', article.idArticle]">Read
+                <button mat-button color="accent" [routerLink]="[ '/chatoroku-articles', article.idArticle] ">Read
                     article</button>
             </mat-card-actions>
         </mat-card>

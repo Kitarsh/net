@@ -4,11 +4,15 @@ import { RouterModule } from '@angular/router';
 import { ChatorokuListComponent } from './chatoroku-list/chatoroku-list.component';
 import { ChatorokuDetailComponent } from './chatoroku-detail/chatoroku-detail.component';
 import { MaterialModule } from '../shared/material.module';
+import { ChatorokuParagraphDialogComponent } from './chatoroku-dialog/chatoroku-paragraph-dialog.component';
+import { ChatorokuArticleDialogComponent } from './chatoroku-dialog/chatoroku-article-dialog.component';
 
 @NgModule({
   declarations: [
     ChatorokuListComponent,
     ChatorokuDetailComponent,
+    ChatorokuParagraphDialogComponent,
+    ChatorokuArticleDialogComponent,
   ],
   imports: [
     SharedModule,

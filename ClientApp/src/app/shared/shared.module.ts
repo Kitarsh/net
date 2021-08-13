@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
     NavMenuComponent,
+    TruncatePipe,
   ],
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { MaterialModule } from './material.module';
     CommonModule,
     FormsModule,
     NavMenuComponent,
+    TruncatePipe,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
